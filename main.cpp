@@ -1,10 +1,16 @@
 #include <QApplication>
 #include <QPushButton>
+#include "AiImgSelector.h"
+
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
+
+    QStringList imgs;
+    imgs<<"./a.png"<<"./b.jpg"<<"a1.jpg"
+    ;
+    ImageSelectionWidget mis(imgs);
+    mis.show();
+    mis.resize(500,400);
     return QApplication::exec();
 }

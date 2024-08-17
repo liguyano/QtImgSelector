@@ -14,7 +14,8 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(imgSelector main.cpp)
+add_executable(imgSelector main.cpp
+        AiImgSelector.h)
 target_link_libraries(imgSelector
         Qt5::Core
         Qt5::Gui
